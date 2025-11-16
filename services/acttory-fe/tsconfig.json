@@ -1,0 +1,12 @@
+{
+  "extends": "@acttory/tsconfig/nextjs.json",
+  "compilerOptions": {
+    // Override jsx setting for React 19
+    "jsx": "react-jsx",
+    // Project-specific path alias
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
+}

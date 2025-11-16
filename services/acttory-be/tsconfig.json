@@ -1,0 +1,23 @@
+{
+  "extends": "@acttory/tsconfig/node.json",
+  "compilerOptions": {
+    // NestJS prefers nodenext for modern ESM support
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "resolvePackageJsonExports": true,
+
+    // Project-specific settings
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "baseUrl": "./",
+
+    // Less strict settings for NestJS compatibility
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
+}
